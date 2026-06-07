@@ -5,6 +5,8 @@ import numpy as np
 import os
 from tensorflow.keras.utils import custom_object_scope
 
+st.set_page_config(page_title="Real-to-Comic", layout="wide")
+
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
 # 1. Define the custom InstanceNormalization layer directly
@@ -86,7 +88,7 @@ def translate_to_comic(image_array, IMAGE_SIZE):
     return translated_image.numpy().astype(np.uint8)
 
 def main():
-    st.set_page_config(page_title="Real-to-Comic", layout="wide")
+    # st.set_page_config(page_title="Real-to-Comic", layout="wide")
     st.title("Real-to-Comic Image Translator")
 
     # Choose the mode
